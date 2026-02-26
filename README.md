@@ -1,44 +1,50 @@
 # Arena Solo Shooter
 
-Static browser game ready for free deployment on GitHub Pages.
+HTML, CSS, JavaScript만으로 만든 1인용 브라우저 슈팅 게임입니다.
 
-## Local run
+플레이 링크:
 
-Because the project is plain HTML, CSS, and JavaScript, you can run it with any static file server.
+https://yongdeok43.github.io/ianFight/
 
-Example:
+## 스크린샷
+
+![Arena Solo Shooter 게임 화면](./assets/screenshots/gameplay.png)
+
+## 소개
+
+Arena Solo Shooter는 탑다운 시점으로 진행되는 웨이브 생존형 슈팅 게임입니다. 적의 공격을 피하면서 유도 미사일을 발사하고, 드롭 아이템으로 능력을 강화하며 가능한 오래 버티는 것이 목표입니다.
+
+## 조작법
+
+- 이동: `WASD` 또는 방향키
+- 조준: 마우스
+- 공격: 마우스 왼쪽 클릭 또는 `Space`
+- 전체화면: `F`
+
+## 특징
+
+- 웨이브 기반 생존 전투
+- 보스 웨이브를 포함한 다양한 적 타입
+- 폭발 피해가 있는 미사일 공격
+- 드롭 아이템 기반의 런 업그레이드
+- 빌드 과정 없이 바로 실행 가능한 정적 파일 구조
+
+## 로컬 실행
+
+이 프로젝트는 정적 사이트라서 간단한 파일 서버만 있으면 바로 실행할 수 있습니다.
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+실행 후 `http://localhost:8000` 에 접속하면 됩니다.
 
-## Deploy on GitHub Pages
+## 파일 구성
 
-1. Initialize git in this folder if needed:
+- [index.html](/Users/double.d/Documents/workspace/ianFight/index.html): 게임 캔버스와 기본 페이지 구조
+- [style.css](/Users/double.d/Documents/workspace/ianFight/style.css): UI와 레이아웃 스타일
+- [game.js](/Users/double.d/Documents/workspace/ianFight/game.js): 게임 핵심 로직
 
-```bash
-git init
-git add .
-git commit -m "Prepare GitHub Pages deployment"
-```
+## 배포
 
-2. Create a new GitHub repository and push this project to the `main` branch.
-
-3. In GitHub, open `Settings -> Pages`.
-
-4. Set `Source` to `GitHub Actions`.
-
-5. Push to `main` again if needed. The workflow at [`.github/workflows/deploy-pages.yml`](/Users/double.d/Documents/workspace/ianFight/.github/workflows/deploy-pages.yml) will publish the game automatically.
-
-6. After deployment, the game will be available at:
-
-```text
-https://<your-github-username>.github.io/<repository-name>/
-```
-
-## Notes
-
-- This setup uploads only `index.html`, `game.js`, and `style.css`.
-- Relative asset paths are used, so the game works on a GitHub Pages project site path.
+이 저장소는 [deploy-pages.yml](/Users/double.d/Documents/workspace/ianFight/.github/workflows/deploy-pages.yml)을 통해 GitHub Pages로 자동 배포되도록 설정되어 있습니다.
