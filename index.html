@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arena Solo Shooter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <canvas id="game-canvas" width="960" height="540" aria-label="Arena shooter canvas"></canvas>
+
+      <section id="overlay" class="overlay">
+        <div class="panel">
+          <h1 id="overlay-title">Arena Solo Shooter</h1>
+          <p id="overlay-subtitle">Single-player top-down wave survival.</p>
+
+          <div class="controls">
+            <p><strong>Move:</strong> WASD or Arrow Keys</p>
+            <p><strong>Aim:</strong> Mouse</p>
+            <p><strong>Shoot:</strong> Left Click or Space</p>
+            <p><strong>Fullscreen:</strong> F (Esc exits)</p>
+          </div>
+
+          <button id="start-btn" type="button">Start Game</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
